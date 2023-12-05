@@ -31,7 +31,7 @@ public class TablaOP extends JFrame {
                 Object[] rowData = {
                         op.getNroOrden(),
                         op.getTotalPagar(),
-                        op.getFormaPago(),
+                        op.getFormaPago().getMetodo(),
                         op.getTotalRetenciones(),
                         op.getProveedor().getCuit(),
                 };

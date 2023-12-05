@@ -220,6 +220,7 @@ public class MapperDTO {
         FormaPagoDTO dto = new FormaPagoDTO();
 
         dto.setImporte(source.getImporte());
+        dto.setMetodo(source.getMetodoPago());
         if (Cheque.class.equals(source.getClass())) {
             dto.setNroCheque(((Cheque) source).getNroCheque());
             dto.setEmision(((Cheque) source).getEmision());
