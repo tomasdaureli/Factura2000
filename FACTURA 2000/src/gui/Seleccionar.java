@@ -128,6 +128,7 @@ public class Seleccionar extends JFrame {
                     FormaPago formaPago = new FormaPago();
                     formaPago.setMetodoPago(pago);
                     System.out.println("-- Forma de Pago Seleccionada: " + formaPago.getMetodoPago());
+                    controller.crearOrdenPago(controller.getProveedor(cuit), ordencompraSeleccionadas.getImporte(), formaPago, 0.0, null);
                     dispose();
                 } else {
                     JOptionPane.showMessageDialog(null, "No se ha seleccionado ninguna Orden de Compra", "Advertencia", JOptionPane.WARNING_MESSAGE);

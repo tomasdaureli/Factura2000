@@ -190,6 +190,7 @@ public class MapperDTO {
     public OrdenPagoDTO toOrdenPagoDTO(OrdenPago source) {
         OrdenPagoDTO dto = new OrdenPagoDTO();
 
+        dto.setProveedor(toProveedorDTO(source.getProveedor()));
         dto.setNroOrden(source.getNroOrden());
         dto.setTotalPagar(source.getTotalPagar());
         dto.setFormaPago(toFormaPagoDTO(source.getFormaPago()));
