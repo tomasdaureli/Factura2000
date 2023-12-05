@@ -31,7 +31,6 @@ public class App {
                 LocalDate.of(2010, 1, 1),
                 "Industria Alimentaria");
 
-
         controller.createProveedor(
                 "27987654321",
                 CondicionIVA.RESPONSABLE_INSCRIPTO,
@@ -44,7 +43,6 @@ public class App {
                 LocalDate.of(2012, 3, 5),
                 "Industria Tecnologica"
         );
-
 
         controller.createProveedor(
                 "30876543219",
@@ -59,7 +57,6 @@ public class App {
                 "Industria Textil"
         );
 
-
         controller.createProveedor(
                 "23234567891",
                 CondicionIVA.RESPONSABLE_INSCRIPTO,
@@ -72,7 +69,6 @@ public class App {
                 LocalDate.of(2008, 7, 2),
                 "Construccion"
         );
-
 
         controller.createProveedor(
                 "24765432101",
@@ -87,7 +83,6 @@ public class App {
                 "Librería y otros insumos"
         );
 
-
         controller.createProveedor(
                 "123",
                 CondicionIVA.MONOTRIBUTO,
@@ -101,13 +96,9 @@ public class App {
                 "TESTING"
         );
 
-
-
         controller.createProducto(controller.getProveedor("20123456781"), "Pastas", TipoUnidad.PESO, 1900.0, TipoIVA.IVA_21);
         controller.createProducto(controller.getProveedor("20123456781"), "Carne", TipoUnidad.PESO, 3250.0, TipoIVA.IVA_10_5);
         controller.createProducto(controller.getProveedor("20123456781"), "Minutas", TipoUnidad.UNIDAD, 2980.0, TipoIVA.IVA_5);
-
-
 
         controller.createProducto(controller.getProveedor("27987654321"), "Smartphone X1000", TipoUnidad.UNIDAD, 799000.0, TipoIVA.IVA_21);
         controller.createProducto(controller.getProveedor("27987654321"), "Laptop UltraSlim", TipoUnidad.UNIDAD, 1299000.0, TipoIVA.IVA_10_5);

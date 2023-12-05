@@ -28,7 +28,6 @@ public class GUIController {
 
     Controller controller = Controller.getInstance();
 
-    /*REVISAR PORQUE CC = NULL */
     public static void cargarCuentaCorrienteCompletaProovedor(Controller controller,String Cuit) {
         MapperDTO mapp = new MapperDTO();
         CuentaCorriente cc = new CuentaCorriente();
@@ -53,7 +52,6 @@ public class GUIController {
     public void cargarDatosProveedor(Controller controller) {
         ProveedorDTO proveedorDTO = new ProveedorDTO();
 
-        /*Si se toca la X o cnacelar cierra la ventana no hay verificacion :( */
         proveedorDTO.setCuit(JOptionPane.showInputDialog("Ingrese CUIT del Proveedor"));
         if (proveedorDTO.getCuit() == null) {return;}
         proveedorDTO.setIva(obtenerCondicionIVA());
@@ -111,7 +109,6 @@ public class GUIController {
             }
         });
 
-
         panel.add(new JLabel("Ingrese el CUIT del Proveedor: "));
         panel.add(cuitTextField);
         panel.add(btnVerProveedores);
@@ -156,7 +153,6 @@ public class GUIController {
         JPanel panel = new JPanel();  // Crear un panel para metere los componentes
         JTextField cuitDato = new JTextField(10);
 
-        // Añadir el botón "Ver Proveedores"
         JButton btnVerProveedores = new JButton("Ver Proveedores");
         btnVerProveedores.addActionListener(new ActionListener() {
             @Override
@@ -182,9 +178,7 @@ public class GUIController {
             cuit = cuitDato.getText();
         }
 
-        // System.out.println("ESTOY FUERA DEL IF");
         if (result == JOptionPane.OK_OPTION) {
-            //System.out.println("ESTOY EN EL IF");
             cuit = cuitDato.getText();
             addProd.AgregarProducto(cuit,ordenCompra);
 
