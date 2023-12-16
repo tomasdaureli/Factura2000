@@ -25,7 +25,7 @@ public class Controller {
 
     private static Controller instance;
 
-    public Controller() {
+    private Controller() {
         this.proveedores = new ArrayList<>();
         this.productos = new ArrayList<>();
         this.dtoMapper = new MapperDTO();
